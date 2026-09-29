@@ -696,3 +696,79 @@ body.mode-admin #toast-container { top: calc(var(--topbar-admin-tinggi) + 16px);
 
 .empty-artikel { text-align: center; padding: var(--sp-8) var(--sp-5); background-color: var(--warna-putih); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); max-width: 640px; margin: 0 auto; }
 .empty-artikel svg { width: 64px; height: 64px; margin: 0 auto var(--sp-4); color: var(--warna-utama); opacity: 0.5; }
+
+
+/* Kontrol zoom pada modal crop */
+.crop-zoom-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 12px;
+  background-color: var(--warna-latar);
+  border-radius: var(--radius);
+}
+.crop-zoom-tombol {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  background-color: var(--warna-putih);
+  color: var(--warna-teks);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transisi);
+  border: 1px solid var(--warna-border);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  user-select: none;
+}
+.crop-zoom-tombol:hover {
+  background-color: var(--warna-utama-lembut);
+  color: var(--warna-utama);
+  border-color: var(--warna-utama);
+}
+.crop-zoom-tombol:active {
+  transform: scale(0.95);
+}
+.crop-zoom-slider {
+  flex: 1;
+  max-width: 240px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: var(--warna-border);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.crop-zoom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--warna-utama);
+  cursor: pointer;
+  border: 2px solid var(--warna-putih);
+  box-shadow: var(--shadow);
+}
+.crop-zoom-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--warna-utama);
+  cursor: pointer;
+  border: 2px solid var(--warna-putih);
+  box-shadow: var(--shadow);
+}
+.crop-zoom-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--warna-teks-lembut);
+  min-width: 48px;
+  text-align: center;
+}
