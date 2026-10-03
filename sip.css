@@ -1165,7 +1165,7 @@ body.mode-admin #toast-container { top: calc(var(--topbar-admin-tinggi) + 16px);
   gap: 12px;
 }
 
-/* Update .pengumuman-item agar jadi <a> yang clickable */
+/* Update .pengumuman-item agar jadi link yang clickable */
 .pengumuman-item {
   padding: 12px 14px;
   border-radius: 8px;
