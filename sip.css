@@ -1102,3 +1102,119 @@ body.mode-admin #toast-container { top: calc(var(--topbar-admin-tinggi) + 16px);
     font-size: 13px;
   }
 }
+
+/* ============================================================
+ * PAPAN INFO - DETAIL HALAMAN
+ * ============================================================ */
+
+.papan-info-detail {
+  background: var(--warna-putih);
+  border: 1px solid var(--warna-border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.papan-info-detail-header {
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--warna-border);
+}
+
+.papan-info-detail-judul {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--warna-teks);
+  line-height: 1.3;
+  margin: 16px 0 12px;
+}
+
+.papan-info-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--warna-teks-lembut);
+}
+.papan-info-detail-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.papan-info-detail-isi {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--warna-teks);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.papan-info-detail-lampiran {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--warna-border);
+}
+
+.papan-info-detail-aksi {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--warna-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Update .pengumuman-item agar jadi <a> yang clickable */
+.pengumuman-item {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border-left: 3px solid var(--warna-utama);
+  background: var(--warna-utama-lembut);
+  transition: all 0.15s ease;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+.pengumuman-item:hover {
+  background: rgba(30, 136, 229, 0.12);
+  transform: translateX(2px);
+}
+
+.pengumuman-item-selengkapnya {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--warna-utama);
+  text-align: right;
+}
+
+/* Responsive detail */
+@media (max-width: 640px) {
+  .papan-info-detail { padding: 20px; }
+  .papan-info-detail-judul { font-size: 20px; }
+  .papan-info-detail-isi { font-size: 14px; }
+  .papan-info-detail-aksi { flex-direction: column; }
+  .papan-info-detail-aksi .btn { width: 100%; justify-content: center; }
+}
+
+/* Print: sembunyikan elemen tidak perlu saat cetak */
+@media print {
+  .admin-halaman-header,
+  .topbar-admin,
+  .sidebar,
+  .bottom-nav-admin,
+  .papan-info-detail-aksi {
+    display: none !important;
+  }
+  .papan-info-detail {
+    border: none;
+    padding: 0;
+    box-shadow: none;
+  }
+  body.mode-admin .admin-wrapper {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
